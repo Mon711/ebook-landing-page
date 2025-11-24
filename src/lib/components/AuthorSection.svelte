@@ -6,7 +6,7 @@
 	<h2 class="mb-l">About the author</h2>
 	<div class="author-container">
 		<div class="author-text">
-			<p>
+			<p class="mb-s">
 				Mrinal Sood is an ambitious and results-oriented Developer who combines a solid foundation
 				in full-stack web technologies with a rapid, hands-on pivot into the field of Artificial
 				Intelligence. Proficient across multiple languages, including Python, JavaScript, C, and
@@ -48,8 +48,4 @@
 	.author-text {
 		width: 55%;
 	}
-
-    p{
-        margin-bottom: 20px;
-    }
 </style>
