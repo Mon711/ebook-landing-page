@@ -1,8 +1,28 @@
 <script>
 	let { children, ...props } = $props();
+
+	async function onclick() {
+		const response = await fetch('/api/checkout', {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
+
+		if (!response.ok) {
+			// Handle error
+			console.error('Failed to create checkout session');
+			return;
+		}
+
+		const { url } = await response.json();
+		// Redirect to the Stripe checkout page returned by the API
+		window.location.href = url;
+	}
+
 </script>
 
-<button {...props}>{@render children()}</button>
+<button {...props} {onclick}>{@render children()}</button>
 
 <style>
 	button {

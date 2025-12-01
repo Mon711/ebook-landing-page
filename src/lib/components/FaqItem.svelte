@@ -2,7 +2,7 @@
 	import chevronDown from '$assets/icons/chevron-down.svg';
 
 	let { faq, isExpanded,...props } = $props();
-	$inspect(faq);
+	// $inspect(faq);
 </script>
 
 <button class="container" class:container-expanded={isExpanded} {...props}>
